@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Mini Browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Mini Browser</div>
+            <nav>
+                <a href="#" id="view-sites">View Sites</a>
+                <a href="#" id="logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-container">
+            <h1>Welcome, <span id="user-name"></span>!</h1>
+            <div id="admin-panel" style="display: none;">
+                <h2>Admin Panel</h2>
+                <button id="create-website" class="btn">Create Website</button>
+            </div>
+            
+            <div class="search-container">
+                <h2>Register New Domain</h2>
+                <div class="form-group">
+                    <label for="domain-search">Choose a domain name:</label>
+                    <div class="search-box">
+                        <input type="text" id="domain-search" placeholder="Enter your domain name">
+                        <button id="search-btn" class="btn">Search</button>
+                    </div>
+                </div>
+                
+                <div id="domain-suggestions" class="suggestions">
+                    <!-- Domain suggestions will appear here -->
+                </div>
+            </div>
+
+            <div class="my-domains">
+                <h2>My Domains</h2>
+                <div id="domains-list">
+                    <!-- User's domains will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

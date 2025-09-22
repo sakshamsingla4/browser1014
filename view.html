@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Site - Mini Browser</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .viewer-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .domain-search {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        #domain-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        #visit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        #visit-btn:hover {
+            background-color: #45a049;
+        }
+        
+        #site-frame {
+            width: 100%;
+            height: 80vh;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+        }
+        
+        .not-found {
+            text-align: center;
+            padding: 50px;
+            font-size: 24px;
+            color: #666;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Mini Browser</div>
+            <nav>
+                <a href="dashboard.html" class="btn">My Dashboard</a>
+                <a href="#" id="logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="viewer-container">
+            <div class="header">
+                <h1>View Website</h1>
+                <div class="domain-search">
+                    <input type="text" id="domain-input" placeholder="Enter domain (e.g., mysite.scom)" value="">
+                    <button id="visit-btn">Visit</button>
+                </div>
+            </div>
+            
+            <div id="site-container">
+                <div id="site-frame-container">
+                    <iframe id="site-frame" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+                </div>
+                <div id="not-found" class="not-found" style="display: none;">
+                    <h2>Domain not found</h2>
+                    <p>The domain you're looking for doesn't exist or hasn't been published yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
